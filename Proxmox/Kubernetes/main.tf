@@ -4,7 +4,7 @@ data "local_file" "ssh_private_key" {
 }
 
 resource "proxmox_virtual_environment_vm" "k8s-node" {
-  count = 1 # Number of nodes you want to create. If you don't want to manually change this variable every time use variable.
+  count = 1 # Number of nodes you want to create. If you don't want to manually change this variable every time use var.
   name = "k8s-node-${format("%0000d", 1000 + count.index + 1)}"
   description = "Managed by Terraform"
   tags = ["terraform", "ubuntu"]
