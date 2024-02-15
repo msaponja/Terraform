@@ -77,9 +77,11 @@ runcmd:
  EOF
 
   file_name = "cloud-config.yaml"
-  # Logs from cloud-config are located in /var/log/cloud-init-output.log
-  }
   
+  }
+	
+  # Logs from cloud-config are located in /var/log/cloud-init-output.log
+	
   # Things to do manually after cloud-config is finished:
   # 1. Generate new token on the control node and then apply them on worker nodes so they could join the cluster
   #    kubeadm token create --print-join-command --ttl=0 
