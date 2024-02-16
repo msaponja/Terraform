@@ -30,17 +30,17 @@ In this step I downloaded the image instead of using the local one. I followed s
 Cloud-config is the main focus of this resource configuration, but I also added provisioner so I could change node names accordingly.
 There are probably better ways to do it, but I lost to many hours already to fix that trivia.
 
-4. Cloud-init
+3. Cloud-init
 
 As I already mentioned in the comments, first, check if your datastore support snippets. Datacenter -> Storage -> Edit (Storage) -> Content 
 After that comes the cloud init configuration which is long on purpose, because I tried to cover as much ground as possible.
 At the end of the cloud-config sections the are some optional things to do and the one which is absolutely necessary if you want to join node to the cluser.
 
-5. Output
+4. Output
 
 Output section is there so you could see the IP address and ID of the newly created machine if you somehow don't have the access to proxmox dashboard or CLI.
 
-6. Result
+5. Result
 
 Kubernetes Node ready for some workload.
 Keep in mind when you `terraform destroy` enviroment that you also need to delete the working nodes from your master node.
